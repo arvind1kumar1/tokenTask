@@ -121,7 +121,7 @@ def after60SecondsFreed():
 def after5MinutesDelete():
     print("after5MinutesDelete is called")
     currentDateTime = datetime.now()
-    filterData = filter(lambda x: tokenDict[x]["keepAliveTime"] + timedelta(minutes=1) <= currentDateTime,tokenDict)
+    filterData = filter(lambda x: tokenDict[x]["keepAliveTime"] + timedelta(minutes=5) <= currentDateTime,tokenDict)
     ll = list(filterData)
     print("filter data in after5MinutesDelete ",ll)
     for token in ll:
